@@ -70,8 +70,8 @@ body {
 }
 .leftSide .ranking {
   color: white;
-  width: 50px;
-  height: 50px;
+  width: 100px;
+  height: 100px;
   border-radius: 100%;
   border: 3px solid transparent;
   background-image: linear-gradient(
@@ -86,36 +86,48 @@ body {
   justify-content: center;
 }
 .ranking h3 {
-  margin: 0;
-  display: block;
-  width: 100px;
-  height: 50px;
+  width: 200px;
   text-align: center;
+  font-size: 30px;
   font-weight: 700;
-  transform: translateY(7px);
+  transform: translateY(13px);
 }
 .leftSide p {
-  margin-top: 82px;
-  width: 200px;
+  margin-top: 42px;
+  width: 370px;
   color: #bdbdbd;
+  font-size: 20px;
+  font-weight: 400;
   letter-spacing: 1.5px;
+  line-height: 30px;
+  text-align: center;
 }
-.rightSide .rankingList {
+.rightSide ul {
   width: 510px;
   height: 341px;
-  color: white;
   font-weight: 700;
   letter-spacing: 1px;
-
+  margin-top: 65px;
+}
+.rightSide li {
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  padding-bottom: 20px;
+  font-size: 30px;
+  /* 한줄 말줄임 */
   display: block;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
-.rankingList li {
-  list-style-type: decimal;
-}
 .rightSide button {
+  display: flex;
+  float: right;
+  font-size: 20px;
+  font-weight: 400;
+  justify-content: center;
+  align-items: center;
   color: #828282;
 }
 .rightSide button::before {
