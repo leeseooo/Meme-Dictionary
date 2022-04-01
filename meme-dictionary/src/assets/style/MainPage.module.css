@@ -1,0 +1,124 @@
+body {
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+/* 전체 감싸는 컨테이너 */
+.container {
+  background-color: #232332;
+  height: 820px;
+  padding: 0 175px;
+}
+/* 맨위 첫번째 컨테이너 */
+.container .firstContainer {
+  padding-top: 432px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.searchBar {
+  display: flex;
+  width: 100%;
+  height: 114px;
+  border-radius: 30px;
+  border: 3px solid transparent;
+  align-items: center;
+  background-image: linear-gradient(#fff, #fff),
+    linear-gradient(to right, #ff0000 0%, #d422ff 50%, #2737ff 100%);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+}
+.searchBar input {
+  width: 100%;
+  height: 50%;
+  border: none;
+  border-radius: 30px;
+  text-align: center;
+  font-size: 18px;
+}
+.searchBar input:focus {
+  outline: none;
+  background: none;
+}
+.searchBar .searchIcon {
+  padding-right: 32px;
+  cursor: pointer;
+}
+.firstContainer ul {
+  display: flex;
+  text-align: end;
+  justify-content: end;
+  width: 100%;
+}
+.firstContainer li {
+  color: #fff;
+  margin-right: 25px;
+}
+
+/* 두번째 word ranking 컨테이너 */
+.secondContainer {
+  display: flex;
+  height: 512px;
+  background: #2e335f;
+  justify-content: space-around;
+  padding-top: 41px;
+}
+.secondContainer .leftSide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.leftSide .ranking {
+  color: white;
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  border: 3px solid transparent;
+  background-image: linear-gradient(
+    to right,
+    #ff0000 0%,
+    #d422ff 50%,
+    #2737ff 100%
+  );
+  background-origin: border-box;
+  background-clip: border-box;
+  display: flex;
+  justify-content: center;
+}
+.ranking h3 {
+  margin: 0;
+  display: block;
+  width: 100px;
+  height: 50px;
+  text-align: center;
+  font-weight: 700;
+  transform: translateY(7px);
+}
+.leftSide p {
+  margin-top: 82px;
+  width: 200px;
+  color: #bdbdbd;
+  letter-spacing: 1.5px;
+}
+.rightSide .rankingList {
+  width: 510px;
+  height: 341px;
+  color: white;
+  font-weight: 700;
+  letter-spacing: 1px;
+
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.rankingList li {
+  list-style-type: decimal;
+}
+.rightSide button {
+  color: #828282;
+}
+.rightSide button::before {
+  display: inline-block;
+  content: url("../img/icon_update.svg");
+}
