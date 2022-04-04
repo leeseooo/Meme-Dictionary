@@ -1,16 +1,12 @@
-body {
+main {
   font-family: "Noto Sans KR", sans-serif;
 }
 
-/* 전체 감싸는 컨테이너 */
-.container {
+/* 맨위 첫번째 컨테이너 */
+.firstContainer {
   background-color: #232332;
   height: 820px;
   padding: 0 175px;
-}
-/* 맨위 첫번째 컨테이너 */
-.container .firstContainer {
-  padding-top: 432px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -40,6 +36,10 @@ body {
   outline: none;
   background: none;
 }
+.searchBar input::placeholder {
+  font-family: "Noto Sans KR", sans-serif;
+  letter-spacing: 1.2px;
+}
 .searchBar .searchIcon {
   padding-right: 32px;
   cursor: pointer;
@@ -49,27 +49,32 @@ body {
   text-align: end;
   justify-content: end;
   width: 100%;
+  margin-top: 24px;
 }
 .firstContainer li {
   color: #fff;
   margin-right: 25px;
+  cursor: pointer;
 }
 
 /* 두번째 word ranking 컨테이너 */
-.secondContainer {
+.secondContainer,
+.thirdContainer {
   display: flex;
   height: 512px;
   background: #2e335f;
+  align-items: center;
   justify-content: space-around;
   padding-top: 41px;
 }
-.secondContainer .leftSide {
+.secondContainer .leftSide,
+.thirdContainer .leftSide {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.leftSide .ranking {
-  color: white;
+.secondContainer .leftSide .ranking,
+.thirdContainer .leftSide .ranking {
   width: 100px;
   height: 100px;
   border-radius: 100%;
@@ -85,12 +90,16 @@ body {
   display: flex;
   justify-content: center;
 }
-.ranking h3 {
-  width: 200px;
+.secondContainer .leftSide .ranking h3,
+.thirdContainer .leftSide .ranking h3 {
+  color: white;
   text-align: center;
-  font-size: 30px;
   font-weight: 700;
-  transform: translateY(13px);
+}
+.secondContainer > .leftSide > .ranking h3 {
+  font-size: 30px;
+  transform: translateY(15px);
+  text-shadow: 2px 2px 3px #000;
 }
 .leftSide p {
   margin-top: 42px;
@@ -120,6 +129,8 @@ body {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+
+  cursor: pointer;
 }
 .rightSide button {
   display: flex;
@@ -133,4 +144,44 @@ body {
 .rightSide button::before {
   display: inline-block;
   content: url("../img/icon_update.svg");
+}
+
+/* 세번째 hot meme top 10 이미지 슬라이더 컨테이너 */
+.thirdContainer {
+  background-color: #232332;
+}
+.thirdContainer > .leftSide > .ranking h3 {
+  font-size: 28px;
+  position: absolute;
+  transform: translateY(25px);
+  text-shadow: 2px 2px 3px #000;
+}
+.thirdContainer .rightSide img {
+  width: 540px;
+}
+
+/* 푸터 */
+footer {
+  display: flex;
+  flex-direction: column;
+  background-color: #2e335f;
+  justify-content: center;
+  align-items: center;
+}
+footer > a {
+  display: inline-block;
+  width: 153px;
+  height: 73px;
+  font-size: 1px;
+  text-indent: -9999px;
+  overflow: hidden;
+  margin-top:40px;
+  background: url("../img/logo.svg");
+}
+footer > p {
+  color: #fff;
+  padding: 10px;
+}
+footer > p:last-child {
+  margin-bottom: 20px;
 }
