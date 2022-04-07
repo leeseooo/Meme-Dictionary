@@ -8,21 +8,21 @@ export default function LandingPage() {
     }
     return (
         <div className={styles.mainContainer}>
-            <main>
-                <article>
-                    <h3>Archive</h3>
-                    <p>밈을 기록해보세요</p>
+            <main className={styles.landing_main_cont}>
+                <article className={styles.landing_main_article}>
+                    <h3 className={styles.landing_main_article_tit}>Archive</h3>
+                    <p className={styles.landing_main_article_desc}>밈을 기록해보세요</p>
                 </article>
-                <article>
-                    <h3>Dictionary</h3>
-                    <p>사전처럼 밈을 검색해보세요</p>
+                <article className={styles.landing_main_article}>
+                    <h3 className={styles.landing_main_article_tit}>Dictionary</h3>
+                    <p className={styles.landing_main_article_desc}>사전처럼 밈을 검색해보세요</p>
                 </article>
-                <article>
-                    <h3>Join</h3>
-                    <p>직접 밈을 등록해보세요</p>
+                <article className={styles.landing_main_article}>
+                    <h3 className={styles.landing_main_article_tit}>Join</h3>
+                    <p className={styles.landing_main_article_desc}>직접 밈을 등록해보세요</p>
                 </article>
             </main>
-            <button onClick={onClick}>바로가기</button>
+            <button onClick={onClick} className={styles.lading_main_btn}>바로가기</button>
         </div>
     )
 }

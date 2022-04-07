@@ -4,7 +4,7 @@ import { AiOutlineSearch } from "react-icons/ai";
 
 export default function MainPage() {
     return (
-        <main>
+        <main className={styles.mainpage_main_wrap}>
             <div className={styles.firstContainer}>
                 <div className={styles.searchBar}>
                     <input type="text" id="search" placeholder="키워드를 입력하여 밈을 검색해보세요!" />
