@@ -1,10 +1,16 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom';
 import styles from "../assets/style/LandingPage.module.css"
 
 
 export default function LandingPage() {
-    function onClick() {
-        //각 원 article 중앙 translate 애니메이션, /home으로 이동
+    const navigate = useNavigate();
+
+    const onClick = () => {
+        setTimeout(() => {
+            //각 원 article 중앙 translate 애니메이션, /home으로 이동'
+        }, 3000);
+        navigate('/main', { replace: true });
     }
     return (
         <div className={styles.mainContainer}>
